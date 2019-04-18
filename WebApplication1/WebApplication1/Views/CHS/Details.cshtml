@@ -1,0 +1,50 @@
+﻿@model WebApplication1.Table_1
+
+@{
+    ViewBag.Title = "Chi tiết";
+}
+
+<h2>CHI TIẾT</h2>
+
+<div>
+    <h4>Bảng 1</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+          Tên Sách
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSach)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Giá)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Giá)
+        </dd>
+
+        <dt>
+           Tác giả
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TG)
+        </dd>
+
+        <dt>
+           Số lượng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SL)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.MaSach }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
